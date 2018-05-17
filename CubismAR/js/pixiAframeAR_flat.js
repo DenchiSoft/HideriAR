@@ -8,7 +8,7 @@ window.onload = function () {
 	//画面の回転フラグ
 	var orientationchanged = false;
 	//マーカーに対しての直立フラグ
-	var stand_mode = true;
+	var stand_mode = false;
 
 	var models = [];
 	var app = new PIXI.Application(0, 0, { transparent: true });
