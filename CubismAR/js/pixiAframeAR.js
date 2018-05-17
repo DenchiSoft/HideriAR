@@ -112,7 +112,7 @@ window.onload = function () {
 		plane.setAttribute('width', '5');
 		//マーカーを基準にしたモデルの相対位置
 		plane.setAttribute('position', '0 0 0');
-		var stand = stand_mode ? '0 0 0' : '0 0 0';
+		var stand = stand_mode ? '0 0 0' : '-90 0 0';
 		plane.setAttribute('rotation', stand);
 		marker.appendChild(plane);
 
@@ -180,17 +180,20 @@ window.onload = function () {
 			}
 		});
 	}
-
+	
+	var click_sound = new Audio('CubismAR/assets/squish.mp3');
 	var click_event = function (e) {
 		//クリックモーションの再生
 		models.forEach(function(model){ 
 			var motion = model.animator.getLayer("motion");
 			if(motion && model.click_motion){
+				click_sound.play();
 				motion.stop();
 				motion.play(model.click_motion);
 			}
 		});
 	}
+	
 	//PCとスマホの選択イベントの振り分け
 	if(window.ontouchstart === undefined){
 		window.onclick = click_event;
@@ -205,8 +208,8 @@ window.onload = function () {
 		orientationchanged = true;
 	}
 };
+
 /*
-//FPSの表示
 var script = document.createElement('script');
 script.onload=function(){
 	var stats = new Stats();

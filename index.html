@@ -12,8 +12,8 @@
 	</head>
 	<body style="margin:0px; overflow:hidden;">
 		<!-- maxDetectionRateはマーカーの検出フレームレート。モバイル向けなら15～20程度が目安 -->
-		<a-scene embedded arjs="debugUIEnabled:false; sourceType: webcam; detectionMode: mono; maxDetectionRate: 15;" vr-mode-ui="enabled: false">
-			<a-marker preset='custom' url='CubismAR/assets/logo_marker.patt' changeMatrixMode='modelViewMatrix'></a-marker>
+		<a-scene embedded arjs="debugUIEnabled:false; sourceType: webcam; detectionMode: mono; maxDetectionRate: 60;" vr-mode-ui="enabled: false">
+			<a-marker preset='custom' url='CubismAR/assets/pattern-marker.patt' changeMatrixMode='modelViewMatrix'></a-marker>
 			<a-entity camera></a-entity>
 		</a-scene>
 	</body>
