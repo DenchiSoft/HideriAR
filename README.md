@@ -1,5 +1,5 @@
 # HideriAR
-A cute Live2D AR thingy.
+A cute Live2D AR thingy. Video: http://www.youtube.com/watch?v=watch?v=xW10599Hy3c
 
 ### How to try
 #### 1. Print the marker. Make sure to leave a white border.
